@@ -88,11 +88,17 @@ class Bike:
 
     # increase gear
     def increase_gear(self):
-        self._current_gear += 1
+        if self._current_gear < self._number_of_gears:
+            self._current_gear += 1
+        else:
+            print("Cannot increase: already reached maximum gears")
 
     # Decrease gear
     def decrease_gear(self):
-        self._current_gear -= 1
+        if 1 < self._current_gear:
+            self._current_gear -= 1
+        else:
+            print("Cannot decrease: already at minimum gears")
 
 #    String representation of the Bike object
     def __str__(self):
