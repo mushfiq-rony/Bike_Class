@@ -1,19 +1,43 @@
-****Create a Bike Class****
-\n
-**Properties**
-\n
-Number of Gears (1 - 15) (1 point)
-\nCurrent Gear (should default to 1) (1 point)
-\nNumber of Wheels (1, 2, 3, or 4) (1 point)
-\nBrake Type ("hand brakes" or "foot brakes") (1 point)
-\n \n
+# **Bike Class**
 
-\n**Methods**
-\n
-\nSet & Get Number of Gears (2 points)
-\nSet & Get Current Gear (2 points)
-\nSet & Get Number of Wheels (2 points)
-\nSet & Get Brake Type (2 points)
-\nReset Gears: Set gear back to 1 (1 point)
-\nIncrease Gear: Increase Current Gear by 1, do not allow going over Number of Gears (1 point)
-\nDecrease Gear: Decrease Current Gear by 1, do not allow going under 1 (1 point)
+## **Properties**
+- **Number of Gears (1 - 15)**: 
+  - The bike can have between 1 to 15 gears.
+  
+- **Current Gear (default: 1)**: 
+  - This indicates the gear the bike is currently in, defaulting to 1.
+  
+- **Number of Wheels (1, 2, 3, or 4)**: 
+  - The bike can have 1 to 4 wheels.
+  
+- **Brake Type ("hand brakes" or "foot brakes")**: 
+  - Specifies the type of brakes used on the bike.
+
+## **Methods**
+- **Set & Get Number of Gears**
+    - `set_number_of_gears(gears)`: Sets the number of gears.
+    - `get_number_of_gears()`: Returns the number of gears.
+  
+- **Set & Get Current Gear**
+    - `set_current_gear(gear)`: Sets the current gear.
+    - `get_current_gear()`: Returns the current gear.
+  
+- **Set & Get Number of Wheels**
+    - `set_number_of_wheels(wheels)`: Sets the number of wheels.
+    - `get_number_of_wheels()`: Returns the number of wheels.
+  
+- **Set & Get Brake Type**
+    - `set_brake_type(brake_type)`: Sets the type of brakes.
+    - `get_brake_type()`: Returns the brake type.
+  
+- **Reset Gears**: 
+    - `reset_gears()`: Sets the current gear back to 1.
+  
+- **Increase Gear**: 
+    - `increase_gear()`: Increases the current gear by 1, ensuring it does not exceed the number of gears.
+  
+- **Decrease Gear**: 
+    - `decrease_gear()`: Decreases the current gear by 1, ensuring it does not go below 1.
+
+## **Usage Example**
+- To create an instance of the bike, set the number of gears, increase the gear, and check the current gear.
