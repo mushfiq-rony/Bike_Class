@@ -102,7 +102,8 @@ class Bike:
 
 #    String representation of the Bike object
     def __str__(self):
-        return (f"Bike with {self._number_of_gears} number of gears with current gear {self._current_gear}, {self._number_of_wheels} number of wheels with {self._brake_type} ")
+        return (f"Bike with {self._number_of_gears} number of gears with current gear {self._current_gear}, {self._number_of_wheels}"
+                f" number of wheels with {self._brake_type} ")
 
 
 
