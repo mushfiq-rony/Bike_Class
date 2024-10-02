@@ -8,12 +8,10 @@ class Bike:
 # Number of gears (1-15) : set_number_of_gears(), get_number_of_gears()
 # Current gear (default value: 1): set_current_gear(), get_current_gear()
 # Number of wheels (1-4): set_number_of_wheels(), get_number_of_wheels()
-    __number_of_gear: int = 15
-    __number_of_wheels: int = 4
-    __current_gear: int = 1
-    __brake_type: str = "hand brake"
 
-    def __init__(self, number_of_gears=15, number_of_wheels=4, brake_type="hand brake", **temp):
+    _current_gear: int = 1
+
+    def __init__(self, number_of_gears= 15, number_of_wheels =4, brake_type="hand brake", **temp):
 
     # validate number of gears
         if isinstance(number_of_gears, int) and 1 <= number_of_gears <= 15: # Ensures the value is an integer and value between 1 to 15
@@ -23,10 +21,14 @@ class Bike:
             self._number_of_gears = 10 # setting default value of the number of gears to 10
 
     # Current gear default to 1
-        if 'current_gear' in temp:
-            raise TypeError("'current_gear' is not an accepted keyword argument for Bike class."
-                            "\nThe default value is set to 1")
-        self._current_gear = 1
+        if 'current_gear' in temp  and not temp['current_gear']==1:
+            print("'current_gear' is not an accepted keyword argument for Bike class."
+                            "\nThe default value of current gear is set to 1")
+            self.current_gear = 1
+        elif 'current_gear' in temp and temp['current_gear'] == 1:
+            print("'current_gear' is not an accepted keyword argument for bike class.\n"
+                  "Since, you provided 'current_gear=1' it is same as the default value. So, it is set to 1")
+            self.current_gear =1
 
     # Validate the number of wheels
         if isinstance(number_of_wheels, int) and 1 <= number_of_wheels <= 4:
@@ -96,6 +98,7 @@ class Bike:
     def increase_gear(self):
         if self._current_gear < self._number_of_gears:
             self._current_gear += 1
+            print("The gear has been increased by 1")
         else:
             print("Cannot increase: already reached maximum gears")
 
@@ -103,6 +106,7 @@ class Bike:
     def decrease_gear(self):
         if 1 < self._current_gear:
             self._current_gear -= 1
+            print("The gear has been decreased by 1")
         else:
             print("Cannot decrease: already at minimum gears")
 
