@@ -93,6 +93,7 @@ class Bike:
     # Reset gear to 1
     def reset_gear(self):
         self._current_gear = 1
+        print("Resetting the gear...")
 
     # increase gear
     def increase_gear(self):
@@ -113,6 +114,6 @@ class Bike:
 #    String representation of the Bike object
     def __str__(self):
         return (f"Bike with {self._number_of_gears} number of gears with current gear {self._current_gear}, {self._number_of_wheels}"
-                f" number of wheels with {self._brake_type} ")
+                f" number of wheels with '{self._brake_type}' ")
 
 

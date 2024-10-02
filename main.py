@@ -40,14 +40,8 @@ print("")
 print("")
 
 # Decreasing the gear to the minimum gear and try to bypass it.
-print("To decrease the current gear to the minimum gear 1 and then try to bypass it. We first set the current gear to 3")
-gt.set_current_gear(3)
-gt.get_current_gear()
-print("")
-input("Hit [Enter] to decrease the gear to the minimum number of gears (1)")
-print("Since the current gear is set to 3. We use 'decrease gear' method 2 times to reach minimum gear")
-gt.decrease_gear()
-gt.decrease_gear()
+print("To decrease the current gear to the minimum gear 1 and then try to bypass it. We first reset the gear to 1")
+gt.reset_gear()
 gt.get_current_gear()
 print("")
 input("To see what happens when we try to decrease the gear when the current gear has reached 1. Hit [Enter]...")
@@ -63,3 +57,4 @@ print("")
 # Have a final look at the bike object
 input("Hit [Enter] to have a final look at the bike object")
 print(gt)
+
