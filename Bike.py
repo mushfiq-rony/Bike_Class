@@ -5,10 +5,11 @@
 # Creating a bike class
 class Bike:
 # Properties
-# Number of gears (1-15) : set_number_of_gears(), get_number_of_gears()
+# Number of gears (1-15)[Default value: 15] : set_number_of_gears(), get_number_of_gears()
 # Current gear (default value: 1): set_current_gear(), get_current_gear()
-# Number of wheels (1-4): set_number_of_wheels(), get_number_of_wheels()
-
+# Number of wheels (1-4)[default value: 4): set_number_of_wheels(), get_number_of_wheels()
+# brake type [default value: hand brake]: set_hand_brake(), get_hand_brake()
+    
     _current_gear: int = 1
 
     def __init__(self, number_of_gears= 15, number_of_wheels =4, brake_type="hand brake", **temp):
@@ -17,8 +18,8 @@ class Bike:
         if isinstance(number_of_gears, int) and 1 <= number_of_gears <= 15: # Ensures the value is an integer and value between 1 to 15
             self._number_of_gears = number_of_gears
         else:
-            print("The number of gears should be an integer and between 1 to 15") # Print the error message
-            self._number_of_gears = 10 # setting default value of the number of gears to 10
+            print("The number of gears should be an integer and between 1 to 15. Setting the default value of 15") # Print the error message
+            self._number_of_gears = 15 # setting default value of the number of gears to 15
 
     # Current gear default to 1
         if 'current_gear' in temp  and not temp['current_gear']==1:
@@ -36,7 +37,7 @@ class Bike:
         else:
             print("Invalid Input: The number of values should be an integer and between 1 to 4. "
                   "\nNow setting the number of wheels to default value 4")
-            self._number_of_wheels = 4 # Setting the default value of the
+            self._number_of_wheels = 4 # Setting the default value to 4
     # Validating the brake type
         if brake_type not in ["hand brake", "foot brake"]:
             print('Invalid Input: The brake type should be either "hand brake" or "foot brake". \nNow setting it to the default "hand brake"')
