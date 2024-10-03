@@ -9,7 +9,15 @@ class Bike:
 # Current gear (default value: 1): set_current_gear(), get_current_gear()
 # Number of wheels (1-4)[default value: 4): set_number_of_wheels(), get_number_of_wheels()
 # brake type [default value: hand brake]: set_hand_brake(), get_hand_brake()
-    
+
+# Methods
+# Set & Get Number of Gears.
+# Set & Get Current Gear.
+# Set & Get Number of Wheels.
+# Set & Get Brake Type.
+# Reset Gears: Set gear back to 1.
+# Increase Gear: Increase Current Gear by 1, do not allow going over Number of Gears.
+# Decrease Gear: Decrease Current Gear by 1, do not allow going under 1.
     _current_gear: int = 1
 
     def __init__(self, number_of_gears= 15, number_of_wheels =4, brake_type="hand brake", **temp):
